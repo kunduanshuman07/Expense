@@ -22,15 +22,16 @@ const Wrapper = styled.div`
     display: flex;
     background-color: whitesmoke;
     border-radius: 3px;
+    // margin-left:auto;
   }
   .search-input {
-    margin-left: 2px;
+    margin-left: 10px;
     flex: 1;
     font-weight: bold;
     color:black;
   }
   .search-button {
-    padding: 1px;
+    padding: 5px;
     color:black;
   }
   .icons {

@@ -4,6 +4,11 @@ const Wrapper = styled.div`
   @media (min-width: 992px) {
     display: block;
     box-shadow: 1px 0px 0px 0px rgba(0, 0, 0, 0.1);
+    .link {
+      all: unset;
+      text-decoration: none;
+      color: inherit;
+    }
     .show-sidebar {
       background: #0d1936;
       color: white;
