@@ -3,5 +3,19 @@
 * {
   margin: 0;
   padding: 0;
+}
+html,
+body,
+#root,
+.app,
+.content {
+  height: 100%;
+  width: 100%;
   font-family: "Ubuntu", sans-serif;
 }
+
+.app {
+  display: flex;
+  position: relative;
+}
+/* background-color: #c7d0d6; */

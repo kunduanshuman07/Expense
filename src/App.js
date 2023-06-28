@@ -1,16 +1,22 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Sidebar, Navbar } from "./components";
-import { Dashboard, LandingPage } from "./pages";
+import { Dashboard, LandingPage, Myexpense, CreateExpense } from "./pages";
 const App = () => {
   return (
     <Router>
-      <Navbar />
-      <Sidebar />
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-      </Routes>
+      <div className="app">
+        <Sidebar />
+        <main className="content">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/myexpense" element={<Myexpense />} />
+            <Route path="/create" element={<CreateExpense />} />
+          </Routes>
+        </main>
+      </div>
     </Router>
   );
 };

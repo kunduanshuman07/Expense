@@ -1,4 +1,5 @@
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
-
-export {Sidebar,Navbar};
+import StatItem from "./StatItem";
+import FormRow from "./FormRow";
+export { Sidebar, Navbar, StatItem, FormRow };

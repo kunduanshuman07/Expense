@@ -7,11 +7,14 @@ import FormatAlignJustifySharpIcon from "@mui/icons-material/FormatAlignJustifyS
 import SpaceDashboardIcon from "@mui/icons-material/SpaceDashboard";
 import Wrapper from "../assets/wrappers/Sidebar";
 import { useState } from "react";
+
 const Sidebar = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   const toggle = () => {
     setSidebarOpen(!sidebarOpen);
   };
+
   return (
     <Wrapper>
       <div className={sidebarOpen ? "show-sidebar" : "sidebar-container"}>
@@ -36,20 +39,20 @@ const Sidebar = () => {
                 <p className="sidebar-link-title">My Expenses</p>
               </div>
             </Link>
-            <Link to="/calendar" className="link">
-              <div className="sidebar-link">
-                <IconButton className="icon">
-                  <CalendarMonthSharpIcon />
-                </IconButton>
-                <p className="sidebar-link-title">Calendar</p>
-              </div>
-            </Link>
             <Link to="/create" className="link">
               <div className="sidebar-link">
                 <IconButton className="icon">
                   <DynamicFormSharpIcon />
                 </IconButton>
                 <p className="sidebar-link-title">Create Expense</p>
+              </div>
+            </Link>
+            <Link to="/calendar" className="link">
+              <div className="sidebar-link">
+                <IconButton className="icon">
+                  <CalendarMonthSharpIcon />
+                </IconButton>
+                <p className="sidebar-link-title">Calendar</p>
               </div>
             </Link>
           </div>
