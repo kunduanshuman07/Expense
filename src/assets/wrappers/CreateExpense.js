@@ -22,6 +22,7 @@ const Wrapper = styled.div`
   input[type="file"],
   input[type="date"],
   input[type="number"] {
+    all:unset;
     width: 100%;
     padding: 8px;
     font-size: 16px;
