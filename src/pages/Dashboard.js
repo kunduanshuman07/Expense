@@ -3,6 +3,7 @@ import StatItem from "../components/StatItem";
 import Wrapper from "../assets/wrappers/Dashboard";
 
 import { FaSuitcaseRolling, FaCalendarCheck, FaBug } from "react-icons/fa";
+import { ChartsContainer } from "../components";
 const defaultStats = [
   {
     title: "Pending",
@@ -32,6 +33,7 @@ const Dashboard = () => {
       {defaultStats.map((item, index) => {
         return <StatItem key={index} {...item} />;
       })}
+      {/* <ChartsContainer/> */}
     </Wrapper>
   );
 };
