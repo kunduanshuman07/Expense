@@ -9,6 +9,7 @@ import {
   ProtectedRoute,
   Register,
   Error,
+  Login,
 } from "./pages";
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/create" element={<CreateExpense />} />
         </Route>
         <Route path="register" element={<Register />} />
+        <Route path="login" element={<Login />} />
         <Route path="landing" element={<LandingPage />} />
         <Route path="*" element={<Error />} />
       </Routes>
