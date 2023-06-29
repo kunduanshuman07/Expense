@@ -1,10 +1,9 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";
-
+import { nanoid } from "nanoid";
 export const registerUser = async (req, res) => {
   try {
-    console.log("control");
     const { firstName, lastName, email, password } = req.body;
     const salt = await bcrypt.genSalt();
     const passwordHash = await bcrypt.hash(password, salt);
@@ -13,6 +12,7 @@ export const registerUser = async (req, res) => {
       lastName,
       email,
       password: passwordHash,
+      emp_id: nanoid(),
     });
     await newUser.save();
     res.status(200).json(newUser);
